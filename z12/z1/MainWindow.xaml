@@ -1,0 +1,28 @@
+﻿<Window x:Class="z1.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:local="clr-namespace:z1" 
+        mc:Ignorable="d" 
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu Name="MainMenu">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Закрыть" Click="CloseMenuItem_Click" ToolTip="Закрыть приложение"/>
+            </MenuItem>
+            <MenuItem Header="Справка">
+                <MenuItem Header="О разработчике" Click="AboutDeveloperMenuItem_Click" ToolTip="Информация о разработчике"/>
+            </MenuItem>
+        </Menu>
+        <ToolBar Grid.Row="1">
+            <Button Name="AboutButton" Click="AboutDeveloperMenuItem_Click" ToolTip="Информация о разработчике" Margin="0,0,0,344" Height="52">О разработчике</Button>
+            <Button Name="CloseButton" Click="CloseMenuItem_Click" ToolTip="Закрыть приложение" Margin="0,0,0,344" Height="52">Закрыть</Button>
+        </ToolBar>
+    </Grid>
+</Window>
